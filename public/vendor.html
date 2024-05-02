@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv=Content-Security-Policy 
+    content="default-src 'self'; script-src 'self' 'unsafe-inline'; img-src 'self' https://*; base-uri 'self'; frame-ancestors 'none';" /> -->
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./css/vendor.css"> -->
+    <script>
+
+        function onCreating() {
+            var content = document.getElementById("tables");
+            content.style.display = "block";
+            //   content.style.transition="1s";
+        }
+
+        const Name = document.getElementById('Name')
+        const Dress = document.getElementById('Dress')
+        const Dress_code = document.getElementById('Dress_code')
+        const Gender = document.getElementById('Gender')
+        const Price = document.getElementById('Price')
+        const btn1 = document.getElementById('btn1')
+        const out1 = document.getElementById('responseContainer')
+
+        function fun1() {
+            out1.innerHTML = "Name is ", Name.value;
+        }
+
+        btn1.addEventListener('click', fun1);
+    </script>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+    }
+
+    body {
+        /* font-family:'Roboto', sans-serif!important; */
+
+    }
+
+    .head {
+        background-color: darkgray;
+
+
+    }
+
+    .head p {
+        text-align: center;
+    }
+
+    .head h1 {
+        height: 80px;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        font-size: 40px;
+
+    }
+
+    .head span {
+
+        font-size: 20px;
+        font-family: cursive;
+    }
+
+    .middle {
+        display: inline-block;
+        height: 500px;
+        border: 2px solid salmon;
+    }
+
+    .mid {
+        display: inline-block;
+        height: 80px;
+        background-color: aqua;
+    }
+
+    .mid p {
+        margin: 20px;
+        font-size: 40px;
+        color: #9f11f1;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    }
+
+    .mid-content {
+        background-color: antiquewhite;
+
+    }
+
+    .mid-content p {
+        font-size: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 1px solid greenyellow;
+    }
+
+    .mid-content p span {
+        font-weight: bold;
+
+    }
+
+    .mid-content img {
+        width: 100%;
+        height: 120px;
+    }
+
+    .add {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .add-create {
+        display: inline-block;
+        text-align: center;
+        margin-top: 20px;
+
+    }
+
+    .add-create h3 {
+
+        font-size: 50px;
+    }
+
+    .add-create input {
+        width: 90px;
+        margin: 20px;
+        padding: 30px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-color: lightcoral;
+        transition: 0.2s;
+    }
+
+    .add-create input:hover {
+        transform: scale(1.2);
+        color: burlywood;
+        background-color: #9f11f1;
+        box-shadow: 1px 1px 7px 8px gainsboro;
+    }
+
+    .add #responseContainer {
+        width: 20vw;
+        height: 10vh;
+        background-color: beige;
+    }
+
+    .add #tables {
+        background-color: burlywood;
+        border: none;
+        border-radius: 4px;
+        margin: 10px;
+        padding: 20px;
+        transition: 0.6s;
+        display: none;
+    }
+
+    .add #tables form {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .add #tables form label {
+        font-size: 30px;
+
+    }
+
+    .add #tables form input {
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .add #tables form input:type[file] {
+        width: 220px;
+    }
+</style>
+
+<body>
+    <div class="head">
+        <h1>AMAKART</h1>
+    </div>
+    <div class="add">
+        <div class="middle">
+            <div class="mid">
+                <p><span>VENDOR </span>Details</p>
+            </div>
+            <div class="mid-content">
+                <p>Vendor's Name : <span>RAMESH BUHURIA</span></p>
+                <p>Business Name : <span>Ramesh Retails</span></p>
+                <p>Location : <span>Chatrapur , Ganjam</span></p>
+                <p>Engaged Since : <span>2020</span></p>
+                
+
+            </div>
+        </div>
+        <div class="add-create">
+            <h3>List New Items</h3>
+            <input type="button" id="create" onclick="onCreating()" value="CREATE">
+        </div>
+        <div id="responseContainer">
+
+        </div>
+        <div id="tables">
+            <form method="POST" action="/">
+                <label for="Name">Name</label>
+                <input type="text" id="Name" name="Name" required>
+                <label for="Dress">Dress</label>
+                <input type="text" id="Dress" name="Dress" required>
+                <label for="Dress_code">Dress code</label>
+                <input type="text" id="Dress_code" name="Dress_code" required>
+                <label for="Gender">Gender</label>
+                <input type="text" id="Gender" name="Gender" required>
+                <label for="Price">Price</label>
+                <input type="text" id="Price" name="Price" required>
+                <input type="submit" id="btn1" value="Submit">
+                <!-- <input type="file" name="Image" id="product"> -->
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

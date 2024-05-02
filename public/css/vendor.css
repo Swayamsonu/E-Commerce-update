@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body{
+    /* font-family:'Roboto', sans-serif!important; */
+
+}
+.head{
+    background-color: darkgray;
+    
+
+}
+.head p{
+    text-align: center;
+}
+.head h1{
+    height: 80px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 40px;
+
+}
+.head span{
+
+    font-size: 20px;
+    font-family: cursive;
+}
+.middle{
+    display: inline-block;
+    height: 500px;
+    border: 2px solid salmon;
+}
+.mid{
+    display: inline-block;
+    height: 80px;
+    background-color: aqua;
+}
+
+.mid p{
+    margin: 20px;
+    font-size: 40px;
+    color:#9f11f1 ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.mid-content{
+    background-color: antiquewhite;
+
+}
+.mid-content p{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid greenyellow;
+}
+
+.mid-content p span{
+    font-weight: bold;
+
+}
+
+.mid-content img{
+    width: 100%;
+    height: 120px;
+}
+.add{
+    display: flex;
+    justify-content: space-between;
+}
+.add-create{
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+    
+}
+.add-create h3{
+
+    font-size: 50px;
+}
+
+.add-create input{
+    width: 90px;
+    margin: 20px;
+    padding: 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: lightcoral;
+    transition: 0.2s;
+}
+
+.add-create input:hover{
+    transform: scale(1.2);
+    color: burlywood;
+    background-color: #9f11f1;
+    box-shadow: 1px 1px 7px 8px gainsboro;
+}
+.add #tables{
+    background-color: burlywood;
+    border: none;
+    border-radius:4px ;
+    margin: 10px;
+    padding: 20px;
+    transition: 0.6s;
+    display: none;
+}
+.add #tables form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.add #tables form label{
+    font-size: 30px;
+
+}
+.add #tables form input{
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.add #tables form input:type[file] {
+    width: 220px;
+}

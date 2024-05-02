@@ -1,0 +1,41 @@
+.sproduct select{
+    display: block;
+    padding: 5px 10px;
+    font-size: 16px;
+    
+}
+
+.sproduct input{
+    margin: 5px;
+    padding:4px;
+    font-size: 20px;
+    width: 50px;
+    height: 40px;
+}
+
+.sproduct input:focus{
+outline: none;
+}
+
+.sproduct button{
+    border: none;
+    border-radius: 2px;
+    background-color: rgb(24, 21, 19);
+    color: rgb(58, 192, 0);
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.sproduct button:hover{
+    background-color: rgb(11, 14, 20);
+}
+
+.small-img-group{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col{
+    
+    cursor: pointer;
+}
